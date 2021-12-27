@@ -3,7 +3,7 @@ import BoardStateEvaluator from "./BoardStateEvaluator";
 import path from "path";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const buildPath = path.join(__dirname, "../client/dist");
 app.use(express.static(buildPath));
@@ -44,6 +44,6 @@ app.post("/api", (request, response) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}.`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
 });
