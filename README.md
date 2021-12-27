@@ -57,6 +57,7 @@ These instructions are for running it into your local machine. You can click the
 1. Go to [this link](https://gitfront.io/r/user-2500572/2a6a86812db181e1483db0ea94ae5b9af9782ce1/tic-tac-toe-hive-gaming/) to view the repository.  
      >If you already have the repository cloned into your machine or you have already extracted the zip file, go to step 2.
 
+    You should see the GitFront repository, the GitHub Repository of this project is private due to exam reasons. Do the following steps:
     1. Click the **clone** button on the top right of the display.
     2. A link should appear and the clone button becomes **copy**.
     3. Click **copy** and open your VSCode Terminal.
@@ -78,7 +79,7 @@ These instructions are for running it into your local machine. You can click the
     ```javascript
     Server is running on port 3000. http://localhost:3000
     ```
-4. You can play the game in your browser thtough the localhost link: http://localhost:3000.
+4. You can play the game in your browser through the localhost link: http://localhost:3000.
 
 <hr>
 
