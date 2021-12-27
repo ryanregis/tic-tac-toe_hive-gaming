@@ -9,8 +9,6 @@ const buildPath = path.join(__dirname, "../client/dist");
 app.use(express.static(buildPath));
 app.use(express.json());
 
-app.use(express.urlencoded({ extended: true }));
-
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client/dist", "index.html"));
 });

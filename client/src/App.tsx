@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
@@ -21,7 +21,7 @@ function Board(): JSX.Element {
       return;
     }
 
-    const data = {
+    const boardState = {
       tiles: tiles,
       tileNumber: tileNumber,
       nextPlayer: nextPlayer,
@@ -30,7 +30,7 @@ function Board(): JSX.Element {
     };
 
     await axios
-      .post("/api", data)
+      .post("/api", boardState)
       .then((response) => {
         setTiles(response.data.tiles);
         setNextPlayer(response.data.nextPlayer);
@@ -61,7 +61,9 @@ function Board(): JSX.Element {
   if (error) {
     return (
       <div>
-        <h3>Error receiving data. <br /> Error: {error}</h3>
+        <h3>
+          Error receiving data. <br /> Error: {error}
+        </h3>
       </div>
     );
   }
@@ -72,8 +74,8 @@ function Board(): JSX.Element {
         {/Winner/.test(gameStatus)
           ? "Congrats!"
           : /Draw/.test(gameStatus)
-          ? "You're both good!"
-          : "Welcome to Tic-Tac-Toe!"}
+            ? "You're both good!"
+            : "Welcome to Tic-Tac-Toe!"}
       </div>
       <div className="status">{gameStatus}</div>
       <div className="board">
