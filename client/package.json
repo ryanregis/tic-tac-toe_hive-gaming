@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "tsc": "tsc",
-    "build": "npm run tsc && vite build",
+    "postinstall": "tsc",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
