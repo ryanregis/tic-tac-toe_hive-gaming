@@ -9,7 +9,7 @@ const buildPath = path.join(__dirname, "../client/dist");
 app.use(express.static(buildPath));
 app.use(express.json());
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client/dist", "index.html"));
@@ -45,5 +45,9 @@ app.post("/api", (request, response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(
+    `Server is running on port ${PORT}. ${
+      PORT === 3000 ? "http://localhost:3000/" : ""
+    }`
+  );
 });

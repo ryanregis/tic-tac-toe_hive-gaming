@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const BoardStateEvaluator_1 = __importDefault(require("./BoardStateEvaluator"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const buildPath = path_1.default.join(__dirname, "../client/dist");
 app.use(express_1.default.static(buildPath));
 app.use(express_1.default.json());
@@ -25,6 +25,6 @@ app.post("/api", (request, response) => {
         console.log(error);
     }
 });
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}.`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}. ${PORT === 3000 ? "http://localhost:3000/" : ""}`);
 });
