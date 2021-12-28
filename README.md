@@ -57,19 +57,19 @@ These instructions are for running it into your local machine. You can click the
      >If you already have the repository cloned into your machine or you have already extracted the zip file, go to step 2.
 
     You should see the GitFront repository, the GitHub Repository of this project is private due to technical exam reasons.<br>  
-    Do the following steps:
+    Next is to do the following steps:
     - Click the **clone** button on the top right of the display.
     - A link should appear and the clone button becomes **copy**.
     - Click **copy** and open your VSCode Terminal.
     - Run the following command to your terminal:
 
-    ```javascript
-    git clone [copied url]
-    ```
+        ```javascript
+        git clone [copied url]
+        ```
     - There should be a folder named `tic-tac-toe-hive-gaming` in your explorer that appeared. <br> Run the following command to go into the root of the folder: 
-   ```javascript
-    cd tic-tac-toe-hive-gaming
-    ```
+        ```javascript
+        cd tic-tac-toe-hive-gaming
+        ```
 
 2. Make sure you're in the root folder of the project and run the following command in the terminal:
    ```javascript
