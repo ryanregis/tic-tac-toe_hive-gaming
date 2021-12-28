@@ -1,4 +1,5 @@
 {
+  // The compiler configuration set by vite.js
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
